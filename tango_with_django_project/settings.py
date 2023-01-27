@@ -22,6 +22,9 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 # 静态目录
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
+# 媒体目录
+MEDIA_DIR = os.path.join(BASE_DIR, 'media')
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -69,6 +72,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media'
             ],
         },
     },
@@ -130,3 +134,7 @@ STATICFILES_DIRS = [STATIC_DIR, ]
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Media part
+MEDIA_ROOT = MEDIA_DIR
+MEDIA_URL = '/media/'
